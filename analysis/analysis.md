@@ -56,8 +56,24 @@
 ### 2. index.js 代码  
 **(1)代码介绍**  
       Node.js的http模块可用非常方便地请求网络资源,只能等到系统自动超时才能做下一步，没有一个固定的时间，该代码则指定一个超时时间，如果到了指定的时间，还没建立连接，则报异常。   
-      请求超时中间件，默认超时时间5000ms，可以清除这个时间通过req.clearTimeout()函数，超时的错误通过next（）函数传递。  
-**代码注释**[https://github.com/douoooou/connect-timeout/blob/master/index1.js](https://github.com/douoooou/connect-timeout/blob/master/index1.js)     
-**测试代码截图**![无法显示](../image/图片1.png)   
+     请求超时中间件，默认超时时间5000ms，可以清除这个时间通过req.clearTimeout()函数，超时的错误通过next（）函数传递。  
+**（2）代码注释**[https://github.com/douoooou/connect-timeout/blob/master/index1.js](https://github.com/douoooou/connect-timeout/blob/master/index1.js)  
+**（3）测试代码截图**  
+![无法显示](../image/图片1.png)   
+**（4）代码分析问题**  
++ 项目的功能是什么？
+> 指定一个超时时间，如果到了指定的时间，还没建立连接，则报异常。     
++ 项目类型是什么？  
+> 模块  
++ 项目的入口文件是哪个？  
+> index.js  
++ 项目的依赖项有哪些，各个依赖项都是做什么，有什么功能？  
+> on-header on-finished ms http-error  
++ 代码模块中有哪些函数？各个函数都是做什么的？  
+> timeout函数  返回一个超时的中间件   
+> onTimeout 函数  连接超时时,返回错误，自定义响应方式  
+
+
+
 
 
