@@ -9,10 +9,10 @@
   "license": "MIT",
   "repository": "expressjs/timeout",
   "dependencies": {
-    "http-errors": "~1.6.1",
-    "ms": "2.0.0",
-    "on-finished": "~2.3.0",
-    "on-headers": "~1.0.1"
+    "http-errors": "^1.6.2",
+    "ms": "^2.0.0",
+    "on-finished": "^2.3.0",
+    "on-headers": "^1.0.1"
   },
   "devDependencies": {
     "eslint": "3.19.0",
@@ -23,8 +23,8 @@
     "eslint-plugin-promise": "3.5.0",
     "eslint-plugin-standard": "3.0.1",
     "istanbul": "0.4.5",
-    "mocha": "2.5.3",
-    "supertest": "1.1.0"
+    "mocha": "^2.5.3",
+    "supertest": "^1.1.0"
   },
   "files": [
     "LICENSE",
