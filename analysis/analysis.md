@@ -47,3 +47,4 @@
 >如果用一个数字和一个有效单位传递一个字符串，则返回等价的毫秒数  
  
 ### 2. index.js 代码
+**代码注释**[https://github.com/douoooou/connect-timeout/blob/master/index1.js](https://github.com/douoooou/connect-timeout/blob/master/index1.js)
