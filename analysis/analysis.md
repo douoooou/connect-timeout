@@ -19,8 +19,15 @@
    >清除请求的超时时间。超时被完全删除，将来不会触发此请求。  
      
    >req.timedout  
-   >true如果超时被解雇; false除此以外
-   
+   >true如果超时被解雇; false除此以外  
+### 4.app.use([path], function)  
+    app.use 加载用于处理http请求的middleware（中间件），当一个请求来的时候，会依次被这些 middlewares处理。执行的顺序是你定义的顺序。
+### 5.中间件  
+什么是中间件Middleware？
+中间件就是类似于一个过滤器的东西，在客户端和应用程序之间的一个处理请求和响应的方法
+其实就是一个简单的JavaScript函数，它除了处理req和res请求外，还接收一个next函数来做流控制。
+由于中间件处理的工作方式，一旦这个模块将请求传递给下一个中间件（为了让你工作，它必须做），它不能再停止流动，所以你必须注意检查请求已超时，然后再继续处理请求。
+
 ##  二.文件解读  
 ### 1. package.json 文件中的依赖项  
 
@@ -46,6 +53,11 @@
 >如果提供包含数字的字符串，它返回它作为一个号码（例如：它返回100对'100'）  
 >如果用一个数字和一个有效单位传递一个字符串，则返回等价的毫秒数  
  
-### 2. index.js 代码
-**代码注释**[https://github.com/douoooou/connect-timeout/blob/master/index1.js](https://github.com/douoooou/connect-timeout/blob/master/index1.js)  
-**测试代码截图**![无法显示](../image/图片1.png)  
+### 2. index.js 代码  
+**(1)代码介绍**  
+      Node.js的http模块可用非常方便地请求网络资源,只能等到系统自动超时才能做下一步，没有一个固定的时间，该代码则指定一个超时时间，如果到了指定的时间，还没建立连接，则报异常。   
+      请求超时中间件，默认超时时间5000ms，可以清除这个时间通过req.clearTimeout()函数，超时的错误通过next（）函数传递。  
+**代码注释**[https://github.com/douoooou/connect-timeout/blob/master/index1.js](https://github.com/douoooou/connect-timeout/blob/master/index1.js)     
+**测试代码截图**![无法显示](../image/图片1.png)   
+
+
