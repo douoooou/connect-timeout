@@ -32,9 +32,9 @@ module.exports = timeout;
 /**
  * Create a new timeout middleware.创建一个timeout中间件
  *
- * @param {number|string} [time=5000] The timeout as a number of milliseconds or a string for `ms`
- * @param {object} [options] Additional options for middleware
- * @param {boolean} [options.respond=true] Automatically emit error when timeout reached
+ * @param {number|string} [time=5000] The timeout as a number of milliseconds or a string for `ms`ms的超时时间
+ * @param {object} [options] Additional options for middleware其他选项
+ * @param {boolean} [options.respond=true] Automatically emit error when timeout reached超时时自动发出错误
  * @return {function} middleware
  * @public
  *
