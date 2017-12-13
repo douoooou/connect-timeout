@@ -21,7 +21,6 @@ var createError = require('http-errors');
 var ms = require('ms');
 var onFinished = require('on-finished');
 var onHeaders = require('on-headers');
-var http=require('http');
 
 /**
  *timeout函数暴露
