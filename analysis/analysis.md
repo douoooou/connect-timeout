@@ -14,7 +14,7 @@
   
    **选项** 
    该timeout函数采用options可能包含以下任何键的可选对象。    
-   >响应    
+   >response  
    > 控制此模块是否会以转发错误的形式“回应”。如果true传递超时错误，next()以便您可以自定义响应行为。这个错误有一个.timeout属性以及.status == 503。这个默认为true。  
    
    >req.clearTimeout（）  
