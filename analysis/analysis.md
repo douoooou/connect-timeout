@@ -1,4 +1,6 @@
 # connect-timeout analysis
+## 前言  
+该项目首先指定一个超时时间，当服务器向客户端发出请求时，如果超过这个时间还没有回应，就发出错误。
 ## 一. Readme文档    
 ### 1. 安装    
   $npm install connect-timeout
